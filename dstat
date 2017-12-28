@@ -559,6 +559,9 @@ class dstat:
 
     def showcsv(self):
         def printcsv(var):
+            if var is None:
+                return ''
+
             if var != round(var):
                 return '%.3f' % var
             return '%d' % long(round(var))
